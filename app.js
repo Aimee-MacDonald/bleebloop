@@ -13,6 +13,14 @@ app.set("view engine", "pug");
 app.use(express.static(__dirname + "/static"));
 
 app.get("/", (req, res) => {
+  let newEmail = new Email({
+    email: "JHAJHSJAHS"
+  });
+
+  newEmail.save(err => {
+    if(err) throw err;
+  });
+  
   res.render("index");
 });
 
