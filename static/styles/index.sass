@@ -1,0 +1,106 @@
+$color-primary-0: #1782B0
+$color-primary-1: #5DAACB
+$color-primary-2: #3793BA
+$color-primary-3: #066791
+$color-primary-4: #045071
+
+$color-secondary-1-0: #FFC217
+$color-secondary-1-1: #FFD96E
+$color-secondary-1-2: #FFCE44
+$color-secondary-1-3: #E6AA00
+$color-secondary-1-4: #B38400
+
+$color-secondary-2-0: #FF2D17
+$color-secondary-2-1: #FF7C6E
+$color-secondary-2-2: #FF5544
+$color-secondary-2-3: #E61600
+$color-secondary-2-4: #B31100
+
+body
+  width: 100vw
+  height: 100vh
+  margin: 0
+  padding: 0
+
+h1
+  margin: 0
+  padding: 0
+
+h2
+  margin: 0
+  padding: 0
+
+.hbox
+  display: flex
+  flex-flow: nowrap row
+  justify-content: center
+  align-items: center
+
+.vbox
+  display: flex
+  flex-flow: nowrap column
+  justify-content: center
+  align-items: center
+
+.rightarrow
+  border: 0.5rem solid black
+  border-top-color: transparent
+  border-right-color: transparent
+  border-bottom-color: transparent
+  margin: 0 0.5rem 0 1rem
+
+#container
+  width: 100%
+  height: 100%
+  justify-content: space-around
+
+#left
+  width: 50%
+  height: 100%
+  background: $color-primary-0
+  h2
+    padding: 8rem 3rem
+    text-align: center
+  img
+    animation: spin 8s linear infinite
+
+#right
+  width: 50%
+  height: 100%
+  form
+    background: $color-primary-0
+    border-radius: 10px
+    width: 80%
+    box-shadow: 0px 5px 10px 0px #666
+    .hbox
+      width: 100%
+  label
+    font-size: 1.5rem
+    font-weight: bold
+    margin-bottom: 0.5rem
+  input
+    height: 2rem
+    width: 100%
+    border-radius: 5px
+    background: $color-secondary-1-1
+    border-color: $color-secondary-1-3
+    padding-left: 0.5rem
+    font-size: 1.5rem
+    font-weight: bold
+    text-align: center
+  button
+    height: 2.5rem
+    border-radius: 5px
+    margin-left: 0.5rem
+    background: $color-secondary-1-0
+    border-color: $color-secondary-1-3
+
+#emailfield
+  align-items: flex-start
+  padding: 2rem
+
+@keyframes spin
+  0%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(360deg)

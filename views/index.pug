@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="styles/index.css")
+  title(Bleebloop)
+body
+  div(id="container", class="hbox")
+    div(id="left", class="vbox")
+      h1 Bleebloop
+      h2 This site is still being built, enter your email address to find out more
+      img(src="images/ghostcircle.png", alt="Friendly ghosts flying in a circle")
+    div(class="vbar")
+    div(id="right", class="vbox")
+      form(method="post", action="/subscribe")
+        div(class="vbox", id="emailfield")
+          label(for="email") Email:
+          div(class="hbox")
+            input(type="email", name="email", placeholder="hello@email.com")
+            button(type="submit")
+              div(class="rightarrow")
