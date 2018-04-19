@@ -7,6 +7,7 @@ head
   link(rel="stylesheet", href="styles/index.css")
   title() Bleebloop Web Development
 body
+  canvas(id="background")
   div(id="container", class="hbox")
     div(id="left", class="vbox")
       h1 Bleebloop
@@ -21,3 +22,4 @@ body
             input(type="email", name="email", placeholder="hello@email.com")
             button(type="submit")
               div(class="rightarrow")
+  script(src="scripts/background.js")
