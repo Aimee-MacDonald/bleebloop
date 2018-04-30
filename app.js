@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const Email = require(__dirname + "/dbmodels/email");
+const Message = require(__dirname + "/dbmodels/message");
 
 mongoose.connect(process.env.DBURL);
 
@@ -17,17 +17,18 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.post("/subscribe", (req, res) => {
-  let newEmail = new Email({
+app.post("/message", (req, res) => {
+  let newMessage = new Message({
+    message: req.body.message,
     email: req.body.email
   });
 
-  newEmail.save(err => {
+  newMessage.save(err => {
     if(err) throw err;
   });
-  
+
   res.render("thanks");
-});
+})
 
 app.get("/", (req, res) => {
   res.render("index");
